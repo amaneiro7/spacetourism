@@ -1,0 +1,74 @@
+:root {
+  --background-color: #0B0D17;
+  --text-main-color:#D0D6F9;
+  --text-secondary-color:#FFFFFF;
+  --heading-font-family: 'Bellefair', serif;
+  --bodytext-font-family: 'Barlow Condensed', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  color-scheme: light dark;
+  color: var(--text-main-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;  
+}
+#root {
+  display: flex;
+  flex-direction: column;  
+  height: 100%;
+  min-height: 100vh;
+}
+
+h1,h2,h3,h4,h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  color: var(--text-secondary-color);
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+h5,p,small, a {
+  font-family: var(--bodytext-font-family);
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 150px;
+  margin: 0;
+}
+h2 {
+  font-size: 100px;
+}
+h3 {
+  font-size: 56px;
+}
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 28px;
+  letter-spacing: 4.75;
+}
+h6 {
+  font-size: 28px;  
+}
+small, a {
+  font-size: 14px;
+  letter-spacing: 2.35;
+}
+p {
+  font-size: 16px;
+  letter-spacing: 2.7;
+}
+

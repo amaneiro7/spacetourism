@@ -48,14 +48,13 @@ export const NavLink = styled(LinkRouter)`
     height: 100%;
     text-decoration: none;
     color: var(--text-secondary-color);
-    letter-spacing: .10rem;
-    font-size: 20px;
+    letter-spacing: .10rem;    
     text-transform: capitalize;    
     transition: all 1s linear;
     &:hover{
         border-bottom: 2px solid var(--text-main-color);
     }
-    &.selected {
+    &[aria-current] {
         border-bottom: 2px solid var(--text-secondary-color);
     }
 `

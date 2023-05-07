@@ -33,7 +33,6 @@ export const Navbar = () => {
           {navbarList.map(navbar => (
             <Li key={navbar.name}>
               <NavLink
-                className={({ isActive }) => isActive ? 'selected' : undefined}
                 to={navbar.path}
               >
                 {navbar.name}

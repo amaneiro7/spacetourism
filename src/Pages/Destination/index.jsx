@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Layout } from '../../components/Layout'
-import data from '../../Mock/data.json'
+import { Layout } from '@/components/Layout'
+import data from '@/Mock/data.json'
 import { RenderDestintaion } from './RenderDestination'
 import { NavList } from './NavList'
 import { Wrapper } from './style'

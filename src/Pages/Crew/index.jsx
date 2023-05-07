@@ -1,15 +1,33 @@
-import React from 'react'
-import { Layout } from '../../components/Layout'
+import React, { useState } from 'react'
+import { Layout } from '@/components/Layout'
+import data from '@/Mock/data.json'
+import { Div, Title, Wrapper, WrapperInfo } from './style'
+import { RadioInputs } from './RadioInputs'
 
 export const CrewPage = () => {
+  const { crew } = data
+  const initialState = crew.find(data => data.name === crew[0].name)
+  const [dataCrew, setDataCrew] = useState(initialState)
+  const handleClick = ({ target: { value } }) => {
+    const newData = crew.find(data => data.name === value)
+    setDataCrew(newData)
+  }
+  const { name, images, role, bio } = dataCrew
+
   return (
     <Layout page='crewpage'>
-      <article>
-        <h5>SO, YOU WANT TO TRAVEL TO</h5>
-        <h1>SPACE</h1>
-        <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
-      </article>
-      <button type='button'>Explore</button>
+      <Wrapper>
+        <WrapperInfo>
+          <Title><span>02</span> meet your crew</Title>
+          <Div>
+            <h4>{role}</h4>
+            <h3>{name}</h3>
+            <p>{bio}</p>
+          </Div>
+          <RadioInputs navList={crew} onClick={handleClick} isActive={dataCrew.name} />
+        </WrapperInfo>
+        <img src={images.png} alt={name} />
+      </Wrapper>
     </Layout>
   )
 }

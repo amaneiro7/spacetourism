@@ -17,7 +17,7 @@ const navbarList = [
   },
   {
     path: '/technology',
-    name: '04 TECHNOLOGY'
+    name: '03 TECHNOLOGY'
   }
 ]
 

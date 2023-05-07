@@ -1,17 +1,19 @@
 import React from 'react'
 import { Navbar } from '../Navbar'
-import './Layout.css'
 import { Footer } from '../Footer'
-import { MainSection } from './style'
+import { Main, MainSection } from './style'
+import './Layout.css'
 
 export const Layout = ({ children, page }) => {
   return (
-    <main className={`${page}`}>
-      <Navbar />
-      <MainSection>
-        {children}
-      </MainSection>
-      <Footer />
-    </main>
+    <>
+      <Main className={`${page}`}>
+        <Navbar />
+        <MainSection>
+          {children}
+        </MainSection>
+        <Footer />
+      </Main>
+    </>
   )
 }

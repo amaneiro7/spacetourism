@@ -1,7 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/shared/logo.svg'
-import './navbar.css'
+import { Hr, Header, Li, Nav, NavLink, Ul } from './style'
 
 const navbarList = [
   {
@@ -24,24 +23,24 @@ const navbarList = [
 
 export const Navbar = () => {
   return (
-    <header>
+    <Header>
       <picture>
         <img src={Logo} alt='Logo' />
       </picture>
-      <hr />
-      <nav>
-        <ul>
+      <Hr />
+      <Nav>
+        <Ul>
           {navbarList.map(navbar => (
-            <li key={navbar.name}>
+            <Li key={navbar.name}>
               <NavLink
                 className={({ isActive }) => isActive ? 'selected' : undefined}
                 to={navbar.path}
               >
                 {navbar.name}
               </NavLink>
-            </li>))}
-        </ul>
-      </nav>
-    </header>
+            </Li>))}
+        </Ul>
+      </Nav>
+    </Header>
   )
 }

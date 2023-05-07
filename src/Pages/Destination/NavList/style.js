@@ -5,7 +5,7 @@ export const Ul = styled.ul`
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: 0;
+    padding: 0;    
     border-bottom: 2px solid transparent;
 `
 export const Li = styled.li`

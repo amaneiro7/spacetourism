@@ -1,4 +1,7 @@
-header {
+import { NavLink as LinkRouter } from 'react-router-dom'
+import styled from 'styled-components'
+
+export const Header = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,24 +9,24 @@ header {
     padding-left: 55px;
     width: auto;
     height: 100px;
-}
-hr {
+    margin-top: 40px;
+`
+export const Hr = styled.hr`
     background-color: var(--text-secondary-color);
     opacity: .25;
     flex: 1;
     height: 1px;
     right: 20px;
-}
+`
 
-nav {
+export const Nav = styled.nav`
     padding-right: 10%;
     display: flex;
     align-items: center;
     height: 100%;
     background-color: rgba(255, 255, 255, .1);    
-
-}
-ul {
+`
+export const Ul = styled.ul`
     height: 100%;
     margin: 0;    
     display: flex;
@@ -31,12 +34,14 @@ ul {
     justify-content: space-around;
     align-items: center;
     gap: 40px;
-}
-li {    
+`
+
+export const Li = styled.li`
     height: 95%;
     list-style: none;
-}
-a {    
+`
+
+export const NavLink = styled(LinkRouter)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,12 +51,11 @@ a {
     letter-spacing: .10rem;
     font-size: 20px;
     text-transform: capitalize;    
-    transition: all 1s linear;     
-}
-a:hover {
-    border-bottom: 2px solid var(--text-main-color);        
-}
-a.selected {
-    border-bottom: 2px solid var(--text-secondary-color);    
-}
-
+    transition: all 1s linear;
+    &:hover{
+        border-bottom: 2px solid var(--text-main-color);
+    }
+    &.selected {
+        border-bottom: 2px solid var(--text-secondary-color);
+    }
+`

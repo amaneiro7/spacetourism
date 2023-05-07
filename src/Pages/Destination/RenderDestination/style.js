@@ -8,19 +8,25 @@ export const Section = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10%;    
+    gap: 15%;
+    padding-top: 8%;
+    @media (min-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
 `
 
 export const Image = styled.img`
     margin-top: 35px;
-    max-width: 30vw;
+    max-width: 35vw;
     min-width: 300px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 `
 
 export const Article = styled.article`    
-    max-width: 30vw;
+    max-width: 35vw;
     min-width:300px;
     display: flex;
     flex-direction: column;

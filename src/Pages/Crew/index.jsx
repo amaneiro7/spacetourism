@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Layout } from '@/components/Layout'
 import data from '@/Mock/data.json'
-import { Div, Title, Wrapper, WrapperInfo } from './style'
+import { Title, Wrapper } from './style'
 import { RadioInputs } from './RadioInputs'
+import { RenderCrew } from './RenderCrew'
 
 export const CrewPage = () => {
   const { crew } = data
@@ -12,21 +13,15 @@ export const CrewPage = () => {
     const newData = crew.find(data => data.name === value)
     setDataCrew(newData)
   }
-  const { name, images, role, bio } = dataCrew
 
   return (
     <Layout page='crewpage'>
       <Wrapper>
-        <WrapperInfo>
-          <Title><span>02</span> meet your crew</Title>
-          <Div>
-            <h4>{role}</h4>
-            <h3>{name}</h3>
-            <p>{bio}</p>
-          </Div>
-          <RadioInputs navList={crew} onClick={handleClick} isActive={dataCrew.name} />
-        </WrapperInfo>
-        <img src={images.png} alt={name} />
+        <Title><span>02</span> meet your crew</Title>
+        {dataCrew &&
+          <RenderCrew {...dataCrew}>
+            <RadioInputs navList={crew} onClick={handleClick} isActive={dataCrew.name} />
+          </RenderCrew>}
       </Wrapper>
     </Layout>
   )

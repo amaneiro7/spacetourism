@@ -1,5 +1,6 @@
 import React from 'react'
-import { Article, Image, Name, Section, WrapperInfo } from './style'
+import { Article, Image, Section, WrapperInfo } from './style'
+import { Name } from '@/style/GlobalStyle'
 
 export const RenderCrew = ({ name, images, role, bio, children }) => {
   return (

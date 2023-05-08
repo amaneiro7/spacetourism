@@ -4,6 +4,7 @@ import data from '@/Mock/data.json'
 import { RenderDestintaion } from './RenderDestination'
 import { NavList } from './NavList'
 import { Wrapper } from './style'
+import { Title } from '../../style/GlobalStyle'
 
 export const DestinationPage = () => {
   const { destinations } = data
@@ -17,7 +18,7 @@ export const DestinationPage = () => {
   return (
     <Layout page='destinationpage'>
       <Wrapper>
-        <h4>01 PICK YOUR DESTINATION</h4>
+        <Title><span>01</span> PICK YOUR DESTINATION</Title>
         {dataDestination &&
           <RenderDestintaion {...dataDestination}>
             <NavList navList={destinations} onClick={handleClick} isActive={dataDestination.name} />

@@ -15,7 +15,7 @@ export const Main = styled.main`
 export const MainSection = styled.section`  
     display: flex;
     height: 100%;
-    padding-inline: 10%;
+    /* padding-inline: 10%; */
     padding-block-end: 5%;
     flex: 1;
 `

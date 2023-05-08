@@ -44,15 +44,3 @@ export const WrapperInfo = styled.div`
         margin-bottom: 10px;
     }
     `
-export const Name = styled.h3`
-    font-size: 24px;
-    line-height: 28px;
-    @media (min-width: 768px) {
-        font-size: 40px;
-        line-height: 46px;
-    }
-    @media (min-width: 1024) {
-        font-size: 56px;
-        line-height: 64px;
-    }
-`

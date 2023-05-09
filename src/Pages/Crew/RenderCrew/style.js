@@ -7,12 +7,11 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15%;
-    margin-inline-start: 100px;
+    gap: 5%;    
     @media (min-width: 1024px) {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-top: 0;
     }
 `

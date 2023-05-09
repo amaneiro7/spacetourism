@@ -26,12 +26,12 @@ export const Image = styled.figure`
     padding: 0;
     margin: 0;
     width: 100vw;
-    grid-area: image;
-    & img{
+    grid-area: image;    
+    & img{        
         width: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
-        object-position: bottom;
+        object-position: center;
     }
     @media (min-width: 1024px) {
         width: 40vw;

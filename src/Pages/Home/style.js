@@ -24,8 +24,8 @@ export const Article = styled.article`
     align-items: center;    
     justify-content: space-evenly;
     text-align: center;
-    margin-inline-start: 100px;
     @media (min-width: 1024px) {
+        margin-inline-start: 100px;
         align-items: flex-start;        
         text-align: left;
     }

@@ -5,19 +5,23 @@ import { Hr, Header, Li, Nav, NavLink, Ul } from './style'
 const navbarList = [
   {
     path: '/',
-    name: '00 HOME'
+    nameId: '00',
+    name: 'HOME'
   },
   {
     path: '/destination',
-    name: '01 DESTINATION'
+    nameId: '01',
+    name: 'DESTINATION'
   },
   {
     path: '/crew',
-    name: '02 CREW'
+    nameId: '02',
+    name: 'CREW'
   },
   {
     path: '/technology',
-    name: '03 TECHNOLOGY'
+    nameId: '03',
+    name: 'TECHNOLOGY'
   }
 ]
 
@@ -35,6 +39,7 @@ export const Navbar = () => {
               <NavLink
                 to={navbar.path}
               >
+                <span>{navbar.nameId} </span>
                 {navbar.name}
               </NavLink>
             </Li>))}

@@ -12,11 +12,15 @@ export const Header = styled.header`
     margin-top: 40px;
 `
 export const Hr = styled.hr`
+    display: none;
     background-color: var(--text-secondary-color);
     opacity: .25;
     flex: 1;
     height: 1px;
     right: 20px;
+    @media (min-width: 1024px) {
+        display:block;
+    }
 `
 
 export const Nav = styled.nav`
@@ -49,12 +53,19 @@ export const NavLink = styled(LinkRouter)`
     text-decoration: none;
     color: var(--text-secondary-color);
     letter-spacing: .10rem;    
-    text-transform: capitalize;    
+    text-transform: capitalize;
     transition: all 1s linear;
     &:hover{
         border-bottom: 2px solid var(--text-main-color);
     }
     &[aria-current] {
         border-bottom: 2px solid var(--text-secondary-color);
+    }
+    & span {
+        display: none;
+        margin-inline-end: 6px;
+        @media(min-width:1024px) {
+            display: block;   
+        }
     }
 `

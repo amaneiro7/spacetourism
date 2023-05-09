@@ -7,26 +7,26 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15%;
-    margin-inline-start: 100px;
+    gap: 5%;    
     @media (min-width: 1024px) {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-top: 0;
     }
 `
 
 export const Image = styled.img`
-    margin-top: 35px;
-    width: 50vw;
+    width: 35%;
     min-width: 300px;
+    margin-top: 35px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     margin-bottom: 5%;
 `
 
 export const Article = styled.article`    
-    width: 60vw;
+    width: 35%;
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ export const WrapperInfo = styled.div`
     gap: 50px;
     border-top: 1px solid #383B4B;
     text-align: center;
-    &div {
+    & div {
         display: flex;
         flex-direction: column;
     }

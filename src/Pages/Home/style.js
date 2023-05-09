@@ -22,7 +22,9 @@ export const Article = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;    
+    justify-content: space-evenly;
     text-align: center;
+    margin-inline-start: 100px;
     @media (min-width: 1024px) {
         align-items: flex-start;        
         text-align: left;

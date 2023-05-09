@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Layout } from '@/components/Layout'
 import data from '@/Mock/data.json'
-import { Title, Wrapper } from './style'
+import { Wrapper } from './style'
+import { Title } from '../../style/GlobalStyle'
 import { RadioInputs } from './RadioInputs'
 import { RenderCrew } from './RenderCrew'
 

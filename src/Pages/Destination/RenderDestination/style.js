@@ -7,7 +7,8 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15%;    
+    gap: 15%;
+    margin-inline-start: 100px;
     @media (min-width: 1024px) {
         flex-direction: row;
         align-items: center;
